@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">SubBook</string>
+    <string name="main_page_title">Subscription List</string>
+    <string name="newsubtitle">New Subscription</string>
+    <string name="namefieldtitle">Subscription Name (20 characters max.)</string>
+    <string name="datefieldtitle">Date Started</string>
+    <string name="monthlychargetitle">Monthly Charge (CAD)</string>
+    <string name="commentfieldtitle">Comment (30 characters max.)</string>
+    <string name="namefieldhint">Name</string>
+    <string name="datefieldhint">yyyy-mm-dd</string>
+    <string name="monthlychargefieldhint">0.00</string>
+    <string name="commentfieldhint">Optional</string>
+    <string name="addbutton">Add</string>
+    <string name="addnewsubbutton">New Subscription</string>
+    <string name="viewEditButton">view/edit</string>
+</resources>
