@@ -34,12 +34,19 @@ import java.util.List;
  */
 public class SubListAdapter extends ArrayAdapter {
     /*
-     * code adapted from
+     * Some excerpts of code in this Class adapted from
+     * Andy O'Sullivan, April 12 2017
      * https://appsandbiscuits.com/listview-tutorial-android-12-ccef4ead27cc
      */
     private Activity context;
     private SubList subList;
 
+    /**
+     * Constructs a SubListAdapter object.
+     *
+     * @param context The activity using SubListAdapter.
+     * @param subList The list of subscriptions.
+     */
     public SubListAdapter(Activity context, SubList subList){
 
         super(context,R.layout.listviewrow , (List) subList);
@@ -47,17 +54,25 @@ public class SubListAdapter extends ArrayAdapter {
 
     }
 
+    /**
+     * Sets values for each row of the ListView in MainActivity.
+     *
+     * @param position Index of the subscriptions in SubList.
+     * @param view Reference to the TextView objects.
+     * @param parent
+     * @return A rowView object (data to populate one row).
+     */
     public View getView(int position, View view, ViewGroup parent){
         LayoutInflater inflater=context.getLayoutInflater();
         View rowView=inflater.inflate(R.layout.listviewrow, null,true);
 
-        //this code gets references to objects in the listview_row.xml file
+        /* Finds the TextView objects in the ListView row. */
         TextView SubName = (TextView) rowView.findViewById(R.id.subListTitle);
         TextView SubDate = (TextView) rowView.findViewById(R.id.subListDate);
         TextView SubCharge = (TextView) rowView.findViewById(R.id.subListCharge);
         TextView SubComment = (TextView) rowView.findViewById(R.id.SubListComment);
 
-        //this code sets the values of the objects to values from the arrays
+        /* Sets the TextView objects' values to those in the subscription. */
         SubName.setText(subList.getSubName(position));
         SubDate.setText(subList.getSubDate(position).toString());
         SubCharge.setText(subList.getSubDate(position).toString());
